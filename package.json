@@ -1,0 +1,31 @@
+{
+  "name": "bot-framework",
+  "version": "0.0.1",
+  "description": "Framework responsável por orquestrar instruções básicas para a criação de um Crawler, com opções de carregamento, ou não, de javascript, com a possibilidade de criar multiplus descritores e controladores responsáveis pela coleta e manipulação das informações a serem procurada\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reny122010/bot-framework.git"
+  },
+  "keywords": [
+    "bot",
+    "framework",
+    "npm",
+    "nodejs",
+    "crawler",
+    "search"
+  ],
+  "author": "Renê Alves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reny122010/bot-framework/issues"
+  },
+  "homepage": "https://github.com/reny122010/bot-framework#readme",
+  "dependencies": {
+    "exceptions": "^0.1.1",
+    "mocha": "^7.1.0"
+  }
+}
