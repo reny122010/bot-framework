@@ -11,8 +11,16 @@ class Bot {
 		this.events = new EventEmitter();
 	}
 
-	checkAttributes(options) {
-		return new Promise(function(resolve, reject) {    
+	checkAttributes(opt) {
+		return new Promise(function(resolve, reject) {
+			const options = undefined;
+
+			try {
+				options = { ...opt };
+			} catch (e) {
+				reject(Exceptions.ILLEGAL_STATE.thro("Invalid input parameters, check them: "+ e));
+			}
+
 	    	attributes.forEach(function(attr, index) {
 				//Check the obrigatory atributes for initialize the bot
 				if (!options.hasOwnProperty(attr)) {

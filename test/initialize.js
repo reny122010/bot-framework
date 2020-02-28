@@ -7,7 +7,7 @@ describe('bot-check', function() {
   	it('Check attribute function', function(done) {
     	var Spider = new Bot();
 
-        const attribute = {
+        var attribute = {
             url : 'https://teste.com.br',
             description_name : 'spider',
             controller_name : 'ctr_spider'
