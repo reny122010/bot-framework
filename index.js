@@ -12,12 +12,12 @@ class Bot {
 	}
 
 	checkAttributes(options) {
-		return new Promise(function(resolve, reject) {       
+		return new Promise(function(resolve, reject) {    
 	    	attributes.forEach(function(attr, index) {
 				//Check the obrigatory atributes for initialize the bot
 				if (!options.hasOwnProperty(attr)) {
 					reject(Exceptions.ILLEGAL_STATE.thro("Attibute of initialize the bot has not present: "+ attr));
-				} else if (index === options.length - 1) { 
+				} else if (index === Object.keys(options).length - 1) { 
 					resolve(options);
 				}
 			});

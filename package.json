@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/reny122010/bot-framework#readme",
   "dependencies": {
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
     "exceptions": "^0.1.1",
     "mocha": "^7.1.0"
   }
