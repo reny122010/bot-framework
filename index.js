@@ -13,7 +13,7 @@ class Bot {
 
 	checkAttributes(opt) {
 		return new Promise(function(resolve, reject) {
-			const options = undefined;
+			var options = undefined;
 
 			try {
 				options = { ...opt };
@@ -30,20 +30,20 @@ class Bot {
 				}
 			});
 	    });
-
 	}
 
 	initialize(options) {
 		//Send for checking the obrigatory attributes
 		try {
+			var _this = this;
 			this.checkAttributes(options).then(function(response){
 				//Send the event of initialize 
-				EventEmitter.emit('initialize', {err: false});
+				_this.events.emit('initialize', {error: false});
 				Spider.execute(response);
 			});	
 		} 
 		catch (err) {
-			EventEmitter.emit('initialize', {err: err.mensage});
+			_this.events.emit('initialize', {error: err.mensage});
 		}
 	}
 }
