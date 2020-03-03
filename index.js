@@ -4,7 +4,7 @@ var EventEmitter = require('events');
 var Spider 		 = require(__dirname + '/core/spider');
 var Exceptions 	 = require("exceptions");
 
-const attributes = ['url', 'description_name', 'controller_name'];
+const attributes = ['url', 'descriptor_name', 'controller_name'];
 
 class Bot {
 	constructor() {
@@ -39,7 +39,9 @@ class Bot {
 			this.checkAttributes(options).then(function(response){
 				//Send the event of initialize 
 				_this.events.emit('initialize', {error: false});
-				Spider.execute(response);
+
+				MySpider = new Spider(response);
+				MySpider.run();
 			});	
 		} 
 		catch (err) {

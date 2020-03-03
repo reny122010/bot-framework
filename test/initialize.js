@@ -1,11 +1,9 @@
 const expect  = require('chai').expect;
 const Bot     = require(__dirname + '/../');
 
-
-
 var attribute = {
     url : 'https://teste.com.br',
-    description_name : 'spider',
+    descriptor_name : 'spider',
     controller_name : 'ctr_spider'
 };
 
@@ -15,7 +13,7 @@ describe('bot-check', function() {
 
     	Spider.checkAttributes(attribute).then(function(response){
             expect(attribute.url).to.be.equal(response.url);
-            expect(attribute.description_name).to.be.equal(response.description_name);
+            expect(attribute.descriptor_name).to.be.equal(response.descriptor_name);
             expect(attribute.controller_name).to.be.equal(response.controller_name);
             done();            
         }).catch(function(error){
